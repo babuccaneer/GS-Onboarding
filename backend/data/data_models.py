@@ -44,7 +44,7 @@ class MainCommand(BaseSQLModel, table=True):
             format_list = format.split(',')
             if len(params_list) == len(format_list):
                 return self
-        raise ValueError
+        raise ValueError("invalid params: either both need to be None or have same number of values")
 
         
 
